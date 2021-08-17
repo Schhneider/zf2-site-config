@@ -20,11 +20,11 @@
         }
     },
     "require": {
-        "php": ">=5.5",
-        "laminas/laminas-config": "~2.3|~3.0",
-        "laminas/laminas-servicemanager": "~2.3|~3.0",
-        "ocramius/proxy-manager": "~1.0|~2.0",
-        "laminas/laminas-dependency-plugin": "^1.0"
+        "php": "^8.0",
+        "laminas/laminas-config": "~3.0",
+        "laminas/laminas-servicemanager": "~3.0",
+        "ocramius/proxy-manager": "~2.0",
+        "laminas/laminas-dependency-plugin": "^2.2"
     },
     "autoload": {
         "psr-0": {
