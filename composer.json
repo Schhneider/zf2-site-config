@@ -21,9 +21,9 @@
     },
     "require": {
         "php": "^8.0",
-        "laminas/laminas-config": "~3.0",
-        "laminas/laminas-servicemanager": "~3.0",
-        "ocramius/proxy-manager": "~2.0",
+        "laminas/laminas-config": "^3.5",
+        "laminas/laminas-servicemanager": "^3.7",
+        "ocramius/proxy-manager": "^2.12",
         "laminas/laminas-dependency-plugin": "^2.2"
     },
     "autoload": {
