@@ -21,7 +21,6 @@ namespace Eye4web\SiteConfig\Factory\Service;
 
 use Eye4web\SiteConfig\Config\Config;
 use Eye4web\SiteConfig\Service\SiteConfigService;
-use Interop\Container\ContainerInterface;
 use Laminas\ServiceManager\Factory\FactoryInterface;
 use Laminas\ServiceManager\FactoryInterface as LegacyFactoryInterface;
 use Laminas\ServiceManager\ServiceLocatorInterface;

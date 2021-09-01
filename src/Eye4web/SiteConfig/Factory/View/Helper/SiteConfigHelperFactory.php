@@ -25,7 +25,7 @@ use Interop\Container\ContainerInterface;
 use Laminas\ServiceManager\Factory\FactoryInterface;
 use Laminas\ServiceManager\FactoryInterface as LegacyFactoryInterface;
 use Laminas\ServiceManager\ServiceLocatorInterface;
-use Laminas\View\Helper\HelperPluginManager;
+use Laminas\View\HelperPluginManager;
 
 if (!\interface_exists(FactoryInterface::class)) {
     \class_alias(LegacyFactoryInterface::class, FactoryInterface::class);

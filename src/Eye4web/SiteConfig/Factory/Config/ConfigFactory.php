@@ -23,26 +23,13 @@ use Eye4web\SiteConfig\Config\Config;
 use Eye4web\SiteConfig\Options\ModuleOptions;
 use Eye4web\SiteConfig\Reader\ReaderInterface;
 use Laminas\Config\Factory;
-use Laminas\ServiceManager\FactoryInterface;
-use Laminas\ServiceManager\ServiceLocatorInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 
-class ConfigFactory implements FactoryInterface
-{
+class ConfigFactory implements FactoryInterface {
+
     private $configFactory = null;
 
-    /**
-     * @param ServiceLocatorInterface $serviceLocator
-     *
-     * @return Config
-     *
-     * @throws \Exception
-     */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        return $this->__invoke($serviceLocator);
-    }
-    
-    public function __invoke(\Interop\Container\ContainerInterface $container, $requestedName, array $options = null) {
+    public function __invoke(\Interop\Container\ContainerInterface $container, $requestedName, array $options = null): object {
         /* @var ModuleOptions $config */
         $options = $container->get(ModuleOptions::class);
 
@@ -72,8 +59,7 @@ class ConfigFactory implements FactoryInterface
         return new Config($data);
     }
 
-    public function getConfigFactory()
-    {
+    public function getConfigFactory() {
         if (!$this->configFactory) {
             $this->configFactory = new Factory();
         }
@@ -81,8 +67,8 @@ class ConfigFactory implements FactoryInterface
         return $this->configFactory;
     }
 
-    public function setConfigFactory($configFactory)
-    {
+    public function setConfigFactory($configFactory) {
         $this->configFactory = $configFactory;
     }
+
 }
