@@ -22,23 +22,23 @@ namespace Eye4web\SiteConfig\Factory\Reader;
 use Doctrine\ORM\EntityManager;
 use Eye4web\SiteConfig\Options\ModuleOptions;
 use Eye4web\SiteConfig\Reader\DoctrineORMReader;
-use Laminas\ServiceManager\FactoryInterface;
-use Laminas\ServiceManager\ServiceLocatorInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 
-class DoctrineORMReaderFactory implements FactoryInterface
-{
+class DoctrineORMReaderFactory implements FactoryInterface {
+
     /**
-     * @param ServiceLocatorInterface $serviceLocator
-     *
+     * @param \Interop\Container\ContainerInterface $container
+     * @param string $requestedName
+     * @param array $options
      * @return DoctrineORMReader
      */
-    public function createService(ServiceLocatorInterface $serviceLocator)
-    {
-        $objectManager = $serviceLocator->get(EntityManager::class);
-        $options = $serviceLocator->get(ModuleOptions::class);
+    public function __invoke(\Interop\Container\ContainerInterface $container, $requestedName, array $options = null): object {
+        $objectManager = $container->get(EntityManager::class);
+        $moduleOptions = $container->get(ModuleOptions::class);
 
-        $reader = new DoctrineORMReader($objectManager, $options);
+        $reader = new DoctrineORMReader($objectManager, $moduleOptions);
 
         return $reader;
     }
+
 }
