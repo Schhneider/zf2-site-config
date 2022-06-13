@@ -36,7 +36,7 @@
         "ramsey/uuid": "2.7.3",
         "squizlabs/php_codesniffer": "1.5.*",
         "laminas/laminas-code": "^2.5",
-        "laminas/laminas-config": "^2.5",
+        "laminas/laminas-config": "^2.5"
       
     }
 }
