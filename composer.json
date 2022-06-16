@@ -22,7 +22,8 @@
     "require": {
         "php": "^8.0 || ^8.1",
         "laminas/laminas-config": "^3.5",
-        "laminas/laminas-servicemanager": "^3.7"
+        "laminas/laminas-servicemanager": "^3.7",
+        "ocramius/proxy-manager": "^2.15"
     },
     "autoload": {
         "psr-0": {
