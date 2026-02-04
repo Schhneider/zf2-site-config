@@ -29,7 +29,7 @@ class ConfigFactory implements FactoryInterface {
 
     private $configFactory = null;
 
-    public function __invoke(\Interop\Container\ContainerInterface $container, $requestedName, array $options = null): object {
+    public function __invoke(\Interop\Container\ContainerInterface $container, $requestedName, ?array $options = null): object {
         /* @var ModuleOptions $config */
         $options = $container->get(ModuleOptions::class);
 

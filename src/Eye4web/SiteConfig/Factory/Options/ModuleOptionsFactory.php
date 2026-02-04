@@ -24,7 +24,7 @@ use Laminas\ServiceManager\Factory\FactoryInterface;
 
 class ModuleOptionsFactory implements FactoryInterface {
 
-    public function __invoke(\Interop\Container\ContainerInterface $container, $requestedName, array $options = null): object {
+    public function __invoke(\Interop\Container\ContainerInterface $container, $requestedName, ?array $options = null): object {
         $config = $container->get('Config');
         $moduleConfig = [];
         if (isset($config['eye4web']['site-config'])) {
