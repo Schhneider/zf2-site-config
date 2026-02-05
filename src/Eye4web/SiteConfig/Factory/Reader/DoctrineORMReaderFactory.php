@@ -32,7 +32,7 @@ class DoctrineORMReaderFactory implements FactoryInterface {
      * @param array $options
      * @return DoctrineORMReader
      */
-    public function __invoke(\Interop\Container\ContainerInterface $container, $requestedName, array $options = null): object {
+    public function __invoke(\Interop\Container\ContainerInterface $container, $requestedName, ?array $options = null): object {
         $objectManager = $container->get(EntityManager::class);
         $moduleOptions = $container->get(ModuleOptions::class);
 

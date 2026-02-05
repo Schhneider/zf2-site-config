@@ -41,7 +41,7 @@ class SiteConfigServiceFactory implements FactoryInterface
         return $this->__invoke($serviceLocator);
     }
 
-    public function __invoke(\Interop\Container\ContainerInterface $container, $requestedName, array $options = null) {
+    public function __invoke(\Interop\Container\ContainerInterface $container, $requestedName, ?array $options = null) {
         $config = $container->get(Config::class);
 
         $service = new SiteConfigService($config);
